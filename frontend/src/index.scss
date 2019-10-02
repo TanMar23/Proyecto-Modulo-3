@@ -1,0 +1,30 @@
+@import "node_modules/bulmaswatch/minty/bulmaswatch";
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.login-wrapper{
+  background-image: url("https://source.unsplash.com/x8ZStukS2PM/1600x900");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 103vh;
+  justify-content: center
+}
+
+.signup-wrapper{
+  background-image: url("https://source.unsplash.com/dEOC8M_lmxI/1600x900");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 103vh;
+  justify-content: center
+}
