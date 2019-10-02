@@ -26,7 +26,7 @@ class Login extends Component {
         MY_SERVICE.login(this.state.user)
         .then((response) => {
             this.context.logUser(response.data.user);
-            this.props.history.push('/home');
+            this.props.history.push('/');
         })
         .catch((error) => {
             console.log(error);
@@ -51,7 +51,7 @@ class Login extends Component {
                             <input className="input" type="password" name="password" placeholder="Password" onChange={this.handleInput}/>
                             <input className="button is-primary" type="submit" value="Login" />
                         </form>
-                    <p className="has-text-light is-size-5">If you don't have an account yet, you can create your account <Link to={"/signup"}>here</Link></p>   
+                    <p className="has-text-light is-size-5">Si aun no tienes una cuenta, puedes crearla <Link to={"/signup"}>aqui   </Link></p>   
                  </div>
              </div>
             </div>

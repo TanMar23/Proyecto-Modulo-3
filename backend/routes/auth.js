@@ -33,11 +33,22 @@ router.get('/centers', async (req, res) => {
     res.status(200).json({ places })
 
   } catch (error) {
-    console.log(error);
-    
+    console.log(error); 
   }
-  
 })
+
+
+router.get('/center/:id', async (req, res) => {
+  try {
+    const place = await CentrosAcopio.findById(req.params.id)
+    console.log(place);
+    res.status(200).json({ place })
+
+  } catch (error) {
+    console.log(error); 
+  }
+})
+
 
 function isAuth(req, res, next) {
   req.isAuthenticated() ? next() : res.status(401).json({ msg: 'Log in first' });

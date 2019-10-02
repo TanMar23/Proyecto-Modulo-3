@@ -6,6 +6,7 @@ import NotFound from './components/404/NotFound.js';
 import Signup from './components/Signup/Signup';
 import Profile from './components/Profile/Profile'
 import Centers from './components/Centers/Centers'
+import Center from './components/Centers/Center'
 
 const Router = () => (
   <BrowserRouter>
@@ -15,6 +16,7 @@ const Router = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/profile" component={Profile} />
       <Route exact path="/centers" component={Centers} />
+      <Route exact path="/center/:id" component={Center}/>
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
