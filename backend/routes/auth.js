@@ -50,6 +50,20 @@ router.get('/center/:id', async (req, res) => {
 })
 
 
+router.get('/centers/:categoryCenter', async (req, res) => {
+  try {
+    const { categoryCenter } = req.params
+    const centersInCategory = await CentrosAcopio.find({ tipoResiduo: String(categoryCenter).toUpperCase() })
+    console.log(centersInCategory);
+    res.status(200).json({ centersInCategory })
+
+  } catch (error) {
+    console.log(error); 
+  }
+})
+
+
+
 function isAuth(req, res, next) {
   req.isAuthenticated() ? next() : res.status(401).json({ msg: 'Log in first' });
 }
