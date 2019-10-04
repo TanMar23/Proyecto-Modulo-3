@@ -12,7 +12,10 @@ const centrosSchema = new Schema(
         type: String,
         required: true
     },
-    contactNumber: Number,
+    longitud: Number,
+    latitud: Number,
+    horario: String,
+    contactNumber: String,
     fotoPerfil: {
       type: String,
       default: "http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" 

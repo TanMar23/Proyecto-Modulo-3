@@ -24,6 +24,7 @@ class MyProvider extends Component {
 
   render() {
     const { state, logUser, logOut } = this;
+    
     return (
       <MyContext.Provider value={{ state, logUser, logOut }}>
         {this.props.children}
