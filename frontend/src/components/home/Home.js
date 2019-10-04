@@ -13,8 +13,12 @@ function Home() {
         <button className='button is-large is-success'> 
           <Link to={'/centers'}>Centros</Link>
         </button>
-        <button className='button is-large is-success'>Nivel</button>
-        <button className='button is-large is-success'>Recompensas</button>
+        <button className='button is-large is-success'>
+          <Link to={'/nivel'}>Nivel</Link> 
+        </button>
+        <button className='button is-large is-success'>
+          <Link to={'/recompensas'}>Recompensas</Link>
+        </button>
       </div>
     </div>
  </div>

@@ -95,11 +95,6 @@ class Center extends Component {
                                 <p className="card-text">Horario: {this.state.center.horario ? this.state.center.horario : 'No disponible'}</p>
                             </div>
                         </div>
-                        <footer class="card-footer">
-                            <a href="#" class="card-footer-item">Save</a>
-                            <a href="#" class="card-footer-item">Edit</a>
-                            <a href="#" class="card-footer-item">Delete</a>
-                        </footer>
                     </div>
                 </div>
             </div>
