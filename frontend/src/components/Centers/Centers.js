@@ -16,7 +16,6 @@ export default class Centers extends Component {
     }
 
     getFilteredCenters = async () => {
-        console.log("center: " +this.state.center)
         const response = await axios.get(`http://localhost:3000/api/centers/${this.state.center}`)   
         this.setState({
             centers: response.data.centersInCategory 
@@ -53,13 +52,12 @@ export default class Centers extends Component {
 
     render() {
         const { centers } = this.state
-        console.log("Centers:"+centers);
         
         return (
             <div>
                 <div className="columns is-centered">
                     <div className="column is-6">
-                        <p>Centros</p> 
+                        <p className="has-text-centered">Centros</p> 
                     </div>
                 </div>
 
@@ -70,6 +68,7 @@ export default class Centers extends Component {
                                 <div className="control is-expanded">
                                     <div className="select is-fullwidth">
                                     <select name="tipoResiduo" id='tipoResiduo' onChange={this.updateValue}>
+                                        <option>Seleccione una categoria</option>
                                         <option value="ACEITE COMESTIBLE USADO">Aceite comestible usado</option>
                                         <option value="ACEITE Y LUBRICANTE AUTOMOTRIZ USADO">Aceite y lubricante automotriz usado</option>
                                         <option value="ELECTRONICOS Y ELECTRODOMESTICOS">Electronicos y electrodomesticos</option>
@@ -87,22 +86,26 @@ export default class Centers extends Component {
                                 <div className="control">
                                     <button type="submit" className="button is-primary" onClick={this.getFilteredCenters}>Filtrar</button>
                                 </div>
+                                <div className="control">
+                                    <button type="submit" className="button is-primary" onClick={this.getCenters}>Ver todos</button>
+                                </div>
                             </div>
                         </div>
                         </div>
                     
-                    <div className="columns is-centered">
+               
+                <div className="columns is-centered">
                     <div className="column is-7">
                     {centers ? centers.map((center, i) => 
-                        <table className= "box table" key={i}>
-                            <tbody>
-                                <tr>
-                                <td>{center.empresa}</td>
-                                <td><Link to={`/center/${center._id}`}>Ver</Link></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        ) : <p>Cargando...</p>}
+                <table className= "box table" key={i}>
+                    <tbody>
+                        <tr>
+                        <td>{center.empresa}</td>
+                        <td><Link to={`/center/${center._id}`}>Ver</Link></td>
+                        </tr>
+                    </tbody>
+                </table>
+                 ) : <p>Cargando...</p>}
                     </div>
                 </div>
             </div>

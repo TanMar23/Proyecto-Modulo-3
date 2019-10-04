@@ -88,11 +88,11 @@ class Center extends Component {
                         </header>
                         <div class="card-content">
                             <div class="content">
-                                <p className="card-text">Direccion: {this.state.center.address}</p>
-                                <p className="card-text">Email: {this.state.center.email ? this.state.center.email : 'No disponible'}</p>
-                                <p className="card-text">Numero: {this.state.center.contactNumber ? this.state.center.contactNumber : 'No disponible'}</p>
-                                <p className="card-text">Website: {this.state.center.website ? this.state.center.website : 'No disponible'}</p>
-                                <p className="card-text">Horario: {this.state.center.horario ? this.state.center.horario : 'No disponible'}</p>
+                                <p>Direccion: {this.state.center.address}</p>
+                                <p>Email: {this.state.center.email ? this.state.center.email : 'No disponible'}</p>
+                                <p>Numero: {this.state.center.contactNumber ? this.state.center.contactNumber : 'No disponible'}</p>
+                                <p>Website: {this.state.center.website ? this.state.center.website : 'No disponible'}</p>
+                                <p>Horario: {this.state.center.horario ? this.state.center.horario : 'No disponible'}</p>
                             </div>
                         </div>
                     </div>
