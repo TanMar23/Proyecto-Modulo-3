@@ -9,6 +9,9 @@ import Centers from './components/Centers/Centers'
 import Center from './components/Centers/Center'
 import CentersCategory from './components/Centers/CentersCategory';
 import Landing from './components/Landing/Landing';
+import Level from './components/Level';
+import Rewards from './components/Rewards/Rewards';
+import CreateNew from './components/Centers/CreateNew';
 
 const Router = () => (
   <BrowserRouter>
@@ -17,6 +20,9 @@ const Router = () => (
       <Route exact path="/signup" component={Signup}/>
       <Route exact path="/" component={Landing}/>
       <Route exact path="/home" component={Home}/>
+      <Route exact path="/level" component={Level}/>
+      <Route exact path="/rewards" component={Rewards}/>
+      <Route exact path="/create-new" component={CreateNew}/>
       <Route exact path="/profile" component={Profile}/>
       <Route exact path="/centers" component={Centers}/>
       <Route exact path="/center/:id" component={Center}/>

@@ -26,7 +26,7 @@ router.get('/profile', isAuth, (req, res, next) => {
     .catch((err) => res.status(500).json({ err }));
 });
 
-router.get('/centers', async (req, res) => {
+router.get('/centers', async (req, res, next) => {
   try {
     const places = await CentrosAcopio.find()
     console.log(places);
@@ -38,7 +38,7 @@ router.get('/centers', async (req, res) => {
 })
 
 
-router.get('/center/:id', async (req, res) => {
+router.get('/center/:id', async (req, res, next) => {
   try {
     const place = await CentrosAcopio.findById(req.params.id)
     console.log(place);
@@ -50,7 +50,7 @@ router.get('/center/:id', async (req, res) => {
 })
 
 
-router.get('/centers/:categoryCenter', async (req, res) => {
+router.get('/centers/:categoryCenter', async (req, res, next) => {
   try {
     const { categoryCenter } = req.params
     const centersInCategory = await CentrosAcopio.find({ tipoResiduo: String(categoryCenter).toUpperCase() })
@@ -62,6 +62,12 @@ router.get('/centers/:categoryCenter', async (req, res) => {
   }
 })
 
+
+router.post('/create-new', (req, res, next) => {
+  let newCenter = CentrosAcopio.create(req.body)
+  .then(newCenter => res.status(201).json({ newCenter }))
+  .catch(err => res.status(401).json({ err }))
+})
 
 
 function isAuth(req, res, next) {

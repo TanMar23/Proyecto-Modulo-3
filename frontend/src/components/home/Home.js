@@ -6,7 +6,9 @@ function Home() {
  <div>
     <div className="columns">
       <div className="column is-7">
-        Centros de Acopio
+        <p>Quienes somos?</p>
+        <p>Por que green finder?</p>
+        <p>Como funciona?</p>
       </div>
       <div className="column is-5">
                         
@@ -14,11 +16,12 @@ function Home() {
           <Link to={'/centers'}>Centros</Link>
         </button>
         <button className='button is-large is-success'>
-          <Link to={'/nivel'}>Nivel</Link> 
+          <Link to={'/level'}>Nivel</Link> 
         </button>
         <button className='button is-large is-success'>
-          <Link to={'/recompensas'}>Recompensas</Link>
+          <Link to={'/rewards'}>Recompensas</Link>
         </button>
+        
       </div>
     </div>
  </div>

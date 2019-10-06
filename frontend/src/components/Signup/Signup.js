@@ -35,31 +35,31 @@ class Signup extends Component {
       const {userMsg} = this.state.user
       return (
         <div className="signup-wrapper">
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <div className="columns is-centered">
-          <div >
-            <p className="message is-success">{userMsg}</p>
-            <form className="columns is-5" onSubmit={this.onSubmit}>
-              <div className="column">
-                <h1 className="title is-1 has-text-light">Sign up</h1>
-                  <label className="label has-text-light is-size-4">Email:</label>
-                  <input className="input" onChange={this.handleInput} type="email" name="email"/>
-             
-                
-                  <label className="label has-text-light is-size-4">Nombre:</label>
-                  <input className="input" onChange={this.handleInput} type="text" name="name"/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <div className="columns is-centered">
+            <div >
+              <p className="message is-success">{userMsg}</p>
+              <form className="columns is-5" onSubmit={this.onSubmit}>
+                <div className="column">
+                  <h1 className="title is-1 has-text-light">Sign up</h1>
+                    <label className="label has-text-light is-size-4">Email:</label>
+                    <input className="input" onChange={this.handleInput} type="email" name="email"/>
               
-                  <label className="label has-text-light is-size-4">Apellido:</label>
-                  <input className="input" onChange={this.handleInput} type="text" name="lastName"/>
-             
-                  <label className="label has-text-light is-size-4">Contraseña:</label>
-                  <input className="input" onChange={this.handleInput} type="password" name="password"/>
-               
-                <div>
-                <input className="button is-primary is-fullwidth" type="submit" value="Signup"/>
+                  
+                    <label className="label has-text-light is-size-4">Nombre:</label>
+                    <input className="input" onChange={this.handleInput} type="text" name="name"/>
+                
+                    <label className="label has-text-light is-size-4">Apellido:</label>
+                    <input className="input" onChange={this.handleInput} type="text" name="lastName"/>
+              
+                    <label className="label has-text-light is-size-4">Contraseña:</label>
+                    <input className="input" onChange={this.handleInput} type="password" name="password"/>
+                
+                  <div>
+                  <input className="button is-primary is-fullwidth" type="submit" value="Signup"/>
                 </div>
               </div>
             </form>

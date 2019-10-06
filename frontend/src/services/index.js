@@ -21,7 +21,13 @@ const MY_SERVICE = {
   },
   logOut: async () => {
     return await service.get('/logout');
+  },
+
+  addCenter: async center => {
+    return await service.post('/addCenter', center)
   }
+
+
 };
 
 export default MY_SERVICE;

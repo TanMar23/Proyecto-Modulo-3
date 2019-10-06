@@ -61,23 +61,23 @@ export default class Centers extends Component {
                     </div>
                 </div>
 
-              
+              {/* Filter Categoria */}
                     <div className="columns is-centered">
                         <div className="column is-4">
                             <div className="field has-addons">
                                 <div className="control is-expanded">
                                     <div className="select is-fullwidth">
                                     <select name="tipoResiduo" id='tipoResiduo' onChange={this.updateValue}>
-                                        <option>Seleccione una categoria</option>
+                                        <option disabled selected>Seleccione una categoría</option>
                                         <option value="ACEITE COMESTIBLE USADO">Aceite comestible usado</option>
                                         <option value="ACEITE Y LUBRICANTE AUTOMOTRIZ USADO">Aceite y lubricante automotriz usado</option>
-                                        <option value="ELECTRONICOS Y ELECTRODOMESTICOS">Electronicos y electrodomesticos</option>
+                                        <option value="ELECTRONICOS Y ELECTRODOMESTICOS">Electrónicos y electrodomésticos</option>
                                         <option value="MEDICAMENTOS CADUCOS">Medicamentos caducos</option>
                                         <option value="METALES">Metales</option>
-                                        <option value="PAPEL Y CARTON">Papel y carton</option>
+                                        <option value="PAPEL Y CARTON">Papel y cartón</option>
                                         <option value="PET">PET</option>
-                                        <option value="PILAS Y BATERIAS">Pilas y baterias</option>
-                                        <option value="RESIDUOS DE CONSTRUCCION">Residuos de construccion</option>
+                                        <option value="PILAS Y BATERIAS">Pilas y baterías</option>
+                                        <option value="RESIDUOS DE CONSTRUCCION">Residuos de construcción</option>
                                         <option value="RESIDUOS SANITARIOS">Residuos Sanitarios</option>
                                         <option value="VIDRIO">Vidrio</option>
                                     </select>
@@ -90,29 +90,34 @@ export default class Centers extends Component {
                                     <button type="submit" className="button is-primary" onClick={this.getCenters}>Ver todos</button>
                                 </div>
                             </div>
-                        </div>
-                        </div>
                     
+                        </div>
+                        </div>
+                     
                
                 <div className="columns is-centered">
                     <div className="column is-7">
-                    {centers ? centers.map((center, i) => 
-                <table className= "box table" key={i}>
-                    <tbody>
-                        <tr>
-                        <td>{center.empresa}</td>
-                        <td><Link to={`/center/${center._id}`}>Ver</Link></td>
-                        </tr>
-                    </tbody>
-                </table>
-                 ) : <p>Cargando...</p>}
+                        <p className="has-text-centered">¿Conoces algún centro que no este aquí?</p>
+                        <button className='button is-primary'>
+                            <Link to={'/create-new'}>Agregar nuevo centro</Link>
+                        </button>
+                    
+                        {centers ? centers.map((center, i) => 
+                        <table className= "box table" key={i}>
+                            <tbody>
+                                <tr>
+                                <td>{center.empresa}</td>
+                                <td><Link to={`/center/${center._id}`}>Ver</Link></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        ) : <p>Cargando...</p>}
                     </div>
                 </div>
             </div>
         )
     }
 }
-
 
 
 
