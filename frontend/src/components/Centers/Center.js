@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
 import mapboxgl from "mapbox-gl";
-import axios from 'axios'
+import axios from 'axios';
+import QRCode from 'qrcode.react';
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWx6eiIsImEiOiJjandrNmVzNzUwNWZjNGFqdGcwNmJ2ZWhpIn0.ybY6wnAtJwj-Tq0c46sW6A";
@@ -80,19 +81,22 @@ class Center extends Component {
                 className="column is -7 map" style={{ width: "50vw", height: "90vh" }}
                 ref={e => (this.mapContainer = e)}/>
                 <div className="column is-5 data">
-                   <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title card-text">
+                   <div className="card">
+                        <header className="card-header">
+                            <p className="card-header-title card-text">
                                 {this.state.center.empresa}
                             </p>
                         </header>
-                        <div class="card-content">
-                            <div class="content">
+                        <div className="card-content">
+                            <div className="content">
                                 <p>Direccion: {this.state.center.address}</p>
                                 <p>Email: {this.state.center.email ? this.state.center.email : 'No disponible'}</p>
                                 <p>Numero: {this.state.center.contactNumber ? this.state.center.contactNumber : 'No disponible'}</p>
                                 <p>Website: {this.state.center.website ? this.state.center.website : 'No disponible'}</p>
                                 <p>Horario: {this.state.center.horario ? this.state.center.horario : 'No disponible'}</p>
+                            </div>
+                            <div>
+                              <QRCode value={this.state.center.website ? this.state.center.website : '#'} />
                             </div>
                         </div>
                     </div>
