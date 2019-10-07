@@ -36,5 +36,11 @@ code {
   display: flex;
   padding-top: 30px;
   justify-content: center;
-  
+}
+
+.landing-container{
+  background-image: url("https://source.unsplash.com/FZU-vIW-lk8/1600x900");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 103vh;
 }

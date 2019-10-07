@@ -12,9 +12,14 @@ export default class Home extends Component {
               <div>
                   <div className="columns">
                     <div className="column is-7">
-                      <p>Quienes somos?</p>
+                     <div className="container">
+                     <p>Quienes somos?</p>
+                     <img src="https://images.unsplash.com/photo-1493794179168-82ca7cb00437?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" width='400px' height='350px' alt="a lot of people walking in the street"/>
                       <p>Por que green finder?</p>
+                      <img src="https://images.unsplash.com/photo-1518833791667-be4ec78386f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" width='400px' height='350px' alt="green city"/>
                       <p>Como funciona?</p>
+                      <img src="https://images.unsplash.com/photo-1493794179168-82ca7cb00437?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" width='400px' height='350px' alt="a lot of people walking in the street"/>
+                     </div>
                     </div>
                     <div className="column is-5">
         

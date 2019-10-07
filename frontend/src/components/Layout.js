@@ -39,10 +39,10 @@ export default class Layout extends Component {
                     <div className="buttons">
                       {user ? 
                         <div>
-                          <button onClick={this.logOut} className="button is-primary">Log out</button>
                           <div className="navbar-start">
                             <Link className="navbar-item" to="/home">Home</Link>
                             <Link className="navbar-item" to="/profile">Profile</Link>
+                            <button onClick={this.logOut} className="button is-primary">Log out</button>
                           </div>
                         </div>  
                         :
