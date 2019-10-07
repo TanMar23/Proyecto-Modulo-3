@@ -26,6 +26,7 @@ class Login extends Component {
         MY_SERVICE.login(this.state.user)
         .then((response) => {
             this.context.logUser(response.data.user);
+            localStorage.setItem('user', JSON.stringify(response.data.user))
             this.props.history.push('/home');
         })
         .catch((error) => {

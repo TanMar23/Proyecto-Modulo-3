@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { MyContext } from '../../context';
+import Layout from '../Layout'
 
 class Profile extends Component {
 
@@ -21,6 +22,7 @@ class Profile extends Component {
     console.log(user)
 
     return (
+      <Layout history={this.props.history}>
       <div className="columns is-centered">
         <div className="column box ironBox is-10">
           <p className="mesaage is-success"></p>
@@ -60,6 +62,7 @@ class Profile extends Component {
           </form>
         </div>
       </div>
+      </Layout>
     );
   }
 }

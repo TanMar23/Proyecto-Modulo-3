@@ -3,6 +3,7 @@ import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-direct
 import mapboxgl from "mapbox-gl";
 import axios from 'axios';
 import QRCode from 'qrcode.react';
+import Layout from '../Layout'
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWx6eiIsImEiOiJjandrNmVzNzUwNWZjNGFqdGcwNmJ2ZWhpIn0.ybY6wnAtJwj-Tq0c46sW6A";
@@ -71,6 +72,7 @@ class Center extends Component {
   }
   render() {
     return (
+      <Layout history={this.props.history}>
    <div className="section">
 
         <div className="container">
@@ -104,6 +106,7 @@ class Center extends Component {
             </div>
         </div>
    </div>
+   </Layout>
     );
   }
 }

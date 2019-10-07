@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Layout from '../Layout'
 import axios from 'axios'
 
 export default class Centers extends Component {
@@ -32,32 +33,17 @@ export default class Centers extends Component {
 
     }
 
-
-    // onClick = (e) => {
-    //     e.preventDefault();
-    //     .then((response) => {
-    //         this.context.logUser(response.data.user);
-    //         this.props.history.push('/home');
-    //     })
-    //     .catch((error) => {
-    //         console.log(error);
-    //     });
-    // };
-
-    //Array.filter
-    //Crear un onclick y agregarlo al boton
-    //Crear handle inout para el select
-    //Pasar centerscategory
-    //values de los options del select deben ser nombres de categorias
-
     render() {
         const { centers } = this.state
         
         return (
+
+            <Layout history={this.props.history}>
+
             <div>
                 <div className="columns is-centered">
                     <div className="column is-6">
-                        <p className="has-text-centered">Centros</p> 
+                        <p className="has-text-centered">Centros de Acopio</p> 
                     </div>
                 </div>
 
@@ -115,6 +101,8 @@ export default class Centers extends Component {
                     </div>
                 </div>
             </div>
+            </Layout>
+
         )
     }
 }
