@@ -25,7 +25,16 @@ router.get('/profile', isAuth, (req, res, next) => {
     .catch((err) => res.status(500).json({ err }));
 });
 
+router.get('/user/:id', async (req, res, next) => {
+  try {
+    const user = await User.findById(req.params.id)
+    console.log(user);
+    res.status(200).json({ user })
 
+  } catch (error) {
+    console.log(error); 
+  }
+})
 
 
 function isAuth(req, res, next) {

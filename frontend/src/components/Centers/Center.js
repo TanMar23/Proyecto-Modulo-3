@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
 import mapboxgl from "mapbox-gl";
 import axios from 'axios';
-import QRCode from 'qrcode.react';
 import Layout from '../Layout'
+import {MyContext} from '../../context/index'
+import { Link } from 'react-router-dom'
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWx6eiIsImEiOiJjandrNmVzNzUwNWZjNGFqdGcwNmJ2ZWhpIn0.ybY6wnAtJwj-Tq0c46sW6A";
@@ -71,6 +72,7 @@ class Center extends Component {
     })
   }
   render() {
+    // console.log(this.context.state.loggedUser._id)
     return (
       <Layout history={this.props.history}>
    <div className="section">
@@ -98,7 +100,9 @@ class Center extends Component {
                                 <p>Horario: {this.state.center.horario ? this.state.center.horario : 'No disponible'}</p>
                             </div>
                             <div>
-                              <QRCode value={this.state.center.website ? this.state.center.website : '#'} />
+                            <button className='button is-primary'> 
+                          <Link to={'/contribution'}>Quiero contribuir!</Link>
+                        </button>
                             </div>
                         </div>
                     </div>
@@ -110,5 +114,5 @@ class Center extends Component {
     );
   }
 }
-
+Center.contextType = MyContext;
 export default Center;
