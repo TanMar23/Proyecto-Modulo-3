@@ -8,16 +8,23 @@ export default class Contribution extends Component {
 
     render() {
         return (
-            <div>
-                <div>
-                    <p>Muestra  este codigo en el centro de acopio para que quede registrada tu aportacion!</p>
-                    <div className='qrcode'>
-                    <QRCode value={this.context.state.loggedUser._id} />
+            <div className="qrcode-wrapper">
+                <div className="qrcode-container container">
+                    <div className="columns is-centered">
+                    <div className="column is-5 box">
+                        <br/>
+                        <p className="has-text-centered">Muestra  este codigo en el centro de acopio para que quede registrada tu aportacion!</p>
+                        <div className='qrcode'>
+                        <QRCode value={this.context.state.loggedUser._id} />
+                        </div>
+                        <br/>
+                        <div className='button-contribution'>
+                            <button className='button is-primary'> 
+                                <Link to={'/centers'}>Centros</Link>
+                            </button>
+                        </div>
                     </div>
-                    <br/>
-                    <button className='button is-primary'> 
-                          <Link to={'/centers'}>Centros</Link>
-                    </button>
+                    </div>
                 </div>
             </div>
         )

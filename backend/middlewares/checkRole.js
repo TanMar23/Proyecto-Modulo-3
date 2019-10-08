@@ -1,4 +1,4 @@
-// module.exports = role => (req, res, next) => {
+// module.exports = checkRole = role => (req, res, next) => {
 //     if (req.isAuthenticated()) {
 //       if (req.user.role === role) {
 //         next()

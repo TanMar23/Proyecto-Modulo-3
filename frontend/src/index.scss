@@ -35,7 +35,7 @@ code {
 .home-button{
   display: flex;
   padding-top: 30px;
-  justify-content: center;
+  justify-content: space-around
 }
 
 .landing-container{
@@ -47,4 +47,64 @@ code {
 
 .qrcode{
   margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer{
+  background-color: #066d8b;
+}
+
+.add-center-button{
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.ver-button{
+  display: flex;
+  justify-content: flex-end
+}
+
+.category-center{
+  padding-bottom: 20px;
+}
+
+.quieroContribuir-button{
+  display: flex;
+  justify-content: center; 
+}
+
+.button-contribution{
+  display: flex;
+  justify-content: center;
+}
+
+.qrcode-container{
+  padding-top: 15%;
+}
+
+.qrcode-wrapper{
+  background-color: #4db7c1;
+  background-image: url("https://source.unsplash.com/Q3Ea7QQQ6MA/1600x900");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 103vh;
+}
+
+.qrreader-wrapper{
+  background-color: #264f20;
+  background-image: url("https://source.unsplash.com/QSIq9ncQkzY/1600x900");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 103vh;
+}
+
+.qrreader-container{
+  padding-top: 15%;
+}
+
+.qr-code-reader{
+  display: flex;
+  justify-content: center;
 }

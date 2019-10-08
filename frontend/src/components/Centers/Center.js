@@ -72,45 +72,44 @@ class Center extends Component {
     })
   }
   render() {
-    // console.log(this.context.state.loggedUser._id)
     return (
       <Layout history={this.props.history}>
-   <div className="section">
+        <div className="section">
 
-        <div className="container">
-        <p className="has-text-centered">Categoria: {this.state.center.tipoResiduo}</p>
+              <div className="container">
+              <p className="has-text-centered category-center">Categoria: {this.state.center.tipoResiduo}</p>
 
-            <div className="columns">
-                <div
-                className="column is -7 map" style={{ width: "50vw", height: "90vh" }}
-                ref={e => (this.mapContainer = e)}/>
-                <div className="column is-5 data">
-                   <div className="card">
-                        <header className="card-header">
-                            <p className="card-header-title card-text">
-                                {this.state.center.empresa}
-                            </p>
-                        </header>
-                        <div className="card-content">
-                            <div className="content">
-                                <p>Direccion: {this.state.center.address}</p>
-                                <p>Email: {this.state.center.email ? this.state.center.email : 'No disponible'}</p>
-                                <p>Numero: {this.state.center.contactNumber ? this.state.center.contactNumber : 'No disponible'}</p>
-                                <p>Website: {this.state.center.website ? this.state.center.website : 'No disponible'}</p>
-                                <p>Horario: {this.state.center.horario ? this.state.center.horario : 'No disponible'}</p>
-                            </div>
-                            <div>
-                            <button className='button is-primary'> 
-                          <Link to={'/contribution'}>Quiero contribuir!</Link>
-                        </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                  <div className="columns">
+                      <div
+                      className="column is -7 map" style={{ width: "50vw", height: "90vh" }}
+                      ref={e => (this.mapContainer = e)}/>
+                      <div className="column is-5 data">
+                        <div className="card">
+                              <header className="card-header">
+                                  <p className="card-header-title card-text">
+                                      {this.state.center.empresa}
+                                  </p>
+                              </header>
+                              <div className="card-content">
+                                  <div className="content">
+                                      <p>Direccion: {this.state.center.address}</p>
+                                      <p>Email: {this.state.center.email ? this.state.center.email : 'No disponible'}</p>
+                                      <p>Numero: {this.state.center.contactNumber ? this.state.center.contactNumber : 'No disponible'}</p>
+                                      <p>Website: {this.state.center.website ? this.state.center.website : 'No disponible'}</p>
+                                      <p>Horario: {this.state.center.horario ? this.state.center.horario : 'No disponible'}</p>
+                                  </div>
+                                  <div className='home-button'>
+                                  <button className='button is-primary'> 
+                                    <Link to={'/contribution'}>Quiero contribuir!</Link>
+                                  </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
         </div>
-   </div>
-   </Layout>
+      </Layout>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import  MY_SERVICE from '../services/index'
 
 
@@ -61,8 +62,8 @@ export default class Layout extends Component {
             {this.props.children}
             <footer className="footer">
               <div className="content has-text-centered">
-                <p>
-                  <strong>Green Finder</strong> by <a href="https://github.com/TanMar23">Tania Marin</a>. The source code is licensed
+                <p className="has-text-white">
+                  <strong className="has-text-white">Green Finder</strong> by <a href="https://github.com/TanMar23">Tania Marin</a>. The source code is licensed
                 </p>
               </div>
             </footer>

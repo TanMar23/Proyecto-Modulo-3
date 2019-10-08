@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Layout from '../Layout'
 import axios from 'axios'
 
@@ -43,7 +44,8 @@ export default class Centers extends Component {
             <div>
                 <div className="columns is-centered">
                     <div className="column is-6">
-                        <p className="has-text-centered">Centros de Acopio</p> 
+                        <br/>
+                        <p className="has-text-centered">CENTROS DE ACOPIO</p> 
                     </div>
                 </div>
 
@@ -84,16 +86,20 @@ export default class Centers extends Component {
                 <div className="columns is-centered">
                     <div className="column is-7">
                         <p className="has-text-centered">¿Conoces algún centro que no este aquí?</p>
-                        <button className='button is-primary'>
-                            <Link to={'/create-new'}>Agregar nuevo centro</Link>
-                        </button>
+                        <div className='add-center-button'>
+                            <NavLink exact to='/create-new'>
+                            <button className='button is-primary'>Agregar nuevo centro</button>
+                            </NavLink>
+                        </div>
                     
                         {centers ? centers.map((center, i) => 
                         <table className= "box table" key={i}>
                             <tbody>
                                 <tr>
                                 <td>{center.empresa}</td>
+                                <div className="ver-button">
                                 <td><Link to={`/center/${center._id}`}>Ver</Link></td>
+                                </div>
                                 </tr>
                             </tbody>
                         </table>

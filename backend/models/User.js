@@ -19,6 +19,7 @@ const userSchema = new Schema(
       type: String,
       default: "http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" 
     },
+    level: Number
   },
   {
     timestamps: true,
