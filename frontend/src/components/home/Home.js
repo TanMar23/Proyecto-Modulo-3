@@ -3,9 +3,12 @@ import Layout from './../Layout'
 import { NavLink } from 'react-router-dom'
 
 
-
 export default class Home extends Component {
+  state ={
+    user: JSON.parse(localStorage.getItem('user'))
+  };
   render() {
+    const {user} = this.state
     return (
       <Layout history={this.props.history}>
         <div>
@@ -19,17 +22,23 @@ export default class Home extends Component {
                 <br/>
                 <p className='has-text-centered'>Bienvenido a green finder!</p>
                 <div className='home-button'>
+                  { user.role === 'ADMIN'? 
+                 <>
                   <NavLink exact to='/centers'>
                     <button className='button is-large is-primary'> Centros </button>
                   </NavLink>
-
-                  <NavLink exact to='/level'>
-                    <button className='button is-large is-primary'>Nivel</button>
+                  
+                  <NavLink exact to='/test'>
+                  <button className='button is-large is-primary'>Registrar contribucion</button>
                   </NavLink>
-                 
-                 <NavLink exact to='/rewards'>
-                 <button className='button is-large is-primary'>Recompensas</button>
-                 </NavLink>
+                 </>
+                 :
+                 <>
+                  <NavLink exact to='/centers'>
+                    <button className='button is-large is-primary'> Centros </button>
+                  </NavLink>
+                 </>
+                }
                 </div>
                 <div>
                   <p>Quienes somos?</p>

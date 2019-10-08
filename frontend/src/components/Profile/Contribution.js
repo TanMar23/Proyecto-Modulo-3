@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {MyContext} from '../../context/index'
 import QRCode from 'qrcode.react';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 export default class Contribution extends Component {
@@ -19,9 +19,9 @@ export default class Contribution extends Component {
                         </div>
                         <br/>
                         <div className='button-contribution'>
-                            <button className='button is-primary'> 
-                                <Link to={'/centers'}>Centros</Link>
-                            </button>
+                            <NavLink to='/centers'>
+                                <button className='button is-primary'>Centros</button>
+                            </NavLink>
                         </div>
                     </div>
                     </div>

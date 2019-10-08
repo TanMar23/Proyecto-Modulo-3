@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default class Test extends Component {
     state = {
@@ -37,9 +37,9 @@ export default class Test extends Component {
                     <br/>
                     <p className="has-text-centered">{this.state.result}</p>
                     <div className='button-contribution'>
-                            <button className='button is-primary'> 
-                                <Link to={'/centers'}>Centros</Link>
-                            </button>
+                      <NavLink to='/centers'>
+                        <button className='button is-primary'>Centros</button>
+                      </NavLink>
                         </div>
                   </div>
                 </div>

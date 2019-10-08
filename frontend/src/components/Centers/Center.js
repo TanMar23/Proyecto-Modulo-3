@@ -4,14 +4,16 @@ import mapboxgl from "mapbox-gl";
 import axios from 'axios';
 import Layout from '../Layout'
 import {MyContext} from '../../context/index'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWx6eiIsImEiOiJjandrNmVzNzUwNWZjNGFqdGcwNmJ2ZWhpIn0.ybY6wnAtJwj-Tq0c46sW6A";
 
 class Center extends Component {
     state = {
-                center: {}
+              center: {},
+              user: JSON.parse(localStorage.getItem('user'))
             }
         
 
@@ -72,6 +74,7 @@ class Center extends Component {
     })
   }
   render() {
+    const {user} = this.state
     return (
       <Layout history={this.props.history}>
         <div className="section">
@@ -99,9 +102,15 @@ class Center extends Component {
                                       <p>Horario: {this.state.center.horario ? this.state.center.horario : 'No disponible'}</p>
                                   </div>
                                   <div className='home-button'>
-                                  <button className='button is-primary'> 
-                                    <Link to={'/contribution'}>Quiero contribuir!</Link>
-                                  </button>
+                                    {user.role === 'USUARIO' ?
+                                    <>
+                                      <NavLink exact to='/contribution'>
+                                      <button className='button is-primary'>Quiero contribuir!</button>
+                                      </NavLink>
+                                    </>
+                                    :
+                                    <></>
+                                    }
                                   </div>
                               </div>
                           </div>
