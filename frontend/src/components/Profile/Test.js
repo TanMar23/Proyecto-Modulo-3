@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 import { NavLink } from 'react-router-dom'
+import axios from 'axios';
 
 export default class Test extends Component {
     state = {
@@ -12,6 +13,8 @@ export default class Test extends Component {
           this.setState({
             result: data
           })
+          const details = data.replace(" ","-")
+          axios.get('http://localhost:3000/api/levelup/'+details)
         }
       }
       handleError = err => {
@@ -40,7 +43,7 @@ export default class Test extends Component {
                       <NavLink to='/centers'>
                         <button className='button is-primary'>Centros</button>
                       </NavLink>
-                        </div>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -21,6 +21,9 @@ const MY_SERVICE = {
   },
   logOut: async () => {
     return await service.get('/logout');
+  },
+  levelUp: async () => {
+    return await service.get('/levelup/:id')
   }
 
 };

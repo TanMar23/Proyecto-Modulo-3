@@ -41,16 +41,16 @@ export default class Layout extends Component {
                         <div>
                           <div className="navbar-start">
                             <Link className="navbar-item" to="/home">Home</Link>
-                            <Link className="navbar-item" to="/profile">Profile</Link>
-                            <button onClick={this.logOut} className="button is-primary">Log out</button>
+                            <Link className="navbar-item" to="/profile">Perfil</Link>
+                            <button onClick={this.logOut} className="button is-primary">Cerrar Sesión</button>
                           </div>
                         </div>  
                         :
                         <div>
                           <Link className="button is-primary" to="/signup">
-                            <strong>Sign up</strong>
+                            <strong>Crear cuenta</strong>
                           </Link>
-                          <Link className="button is-light" to="/login">Login</Link>
+                          <Link className="button is-light" to="/login">Iniciar Sesión</Link>
                         </div>
                       }
                     </div>

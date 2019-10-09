@@ -40,11 +40,16 @@ export default class Home extends Component {
                  </>
                 }
                 </div>
-                <div>
-                  <p>Quienes somos?</p>
-                  <p>Por que green finder?</p>
-                  <p>Como funciona?</p>
+               
+
+                <div class="tabs is-boxed">
+                  <ul>
+                    <li class="is-active"><a>Quienes somos?</a></li>
+                    <li><a>Por que green finder?</a></li>
+                    <li><a>Como funciona?</a></li>
+                  </ul>
                 </div>
+            
                 
               </div>
             </div>

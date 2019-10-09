@@ -27,7 +27,6 @@ const Router = () => (
       <Route exact path="/centers" component={Centers}/>
       <Route exact path="/center/:id" component={Center}/>
       <Route exact path="/centers/:categoryCenter" component={CentersCategory}/>
-
       <Route component={NotFound}/>
     </Switch>
   </BrowserRouter>
