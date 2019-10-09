@@ -12,6 +12,7 @@ import Landing from './components/Landing/Landing';
 import CreateNew from './components/Centers/CreateNew';
 import Test from './components/Profile/Test';
 import Contribution from './components/Profile/Contribution';
+import ContributionList from './components/Profile/ContributionList';
 
 const Router = () => (
   <BrowserRouter>
@@ -24,6 +25,7 @@ const Router = () => (
       <Route exact path="/profile" component={Profile}/>
       <Route exact path="/test" component={Test}/>
       <Route exact path="/contribution" component={Contribution}/>
+      <Route exact path="/contribution-list" component={ContributionList}/>
       <Route exact path="/centers" component={Centers}/>
       <Route exact path="/center/:id" component={Center}/>
       <Route exact path="/centers/:categoryCenter" component={CentersCategory}/>

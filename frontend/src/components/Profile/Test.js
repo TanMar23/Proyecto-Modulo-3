@@ -2,12 +2,36 @@ import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 import { NavLink } from 'react-router-dom'
 import axios from 'axios';
+import CENTER_SERVICE from '../../services/centers'
 
 export default class Test extends Component {
     state = {
-        result: ''
+        result: '',
+        contribution: {
+          quantity: '',
+          unity: ''
+        }
       }
      
+
+      addContribution = async () => {
+        const {data} = await CENTER_SERVICE.addContribution(this.state.contribution)
+        console.log(data);
+      }
+
+      onSubmit = (e) => {
+        e.preventDefault();
+        this.addContribution()
+        this.props.history.push('/contribution-list')
+      };
+
+      handleInput = (e) => {
+        const { contribution } = this.state;
+        const key = e.target.name;
+        contribution[key] = e.target.value;
+        this.setState({ contribution });
+    }
+
       handleScan = data => {
         if (data) {
           this.setState({
@@ -22,6 +46,7 @@ export default class Test extends Component {
       }
 
     render() {
+      let {contribution} = this.state
         return (
             <div className="qrreader-wrapper">
               <div className="qrreader-container container">
@@ -39,6 +64,30 @@ export default class Test extends Component {
                       </div>
                     <br/>
                     <p className="has-text-centered">{this.state.result}</p>
+                    {this.state.result ? 
+                        <>
+                        <p>Registra la contribucion del usuario!</p>
+                        <form className="columns is-5 box" onSubmit={this.onSubmit}>
+                        <div className="field">
+                          <div className="control">
+                          <input className="input is-primary" onChange={this.handleInput} name="quantity" value={contribution.quantity} type="text" placeholder="cantidad"/>
+                          </div>
+                        </div>
+                        <div className="field">
+                          <div className="control">
+                          <input className="input is-primary"  onChange={this.handleInput} name="unity" value={contribution.unity} type="text" placeholder="ejemplo: litros, kilos"/>
+                          </div>
+                        </div>
+                        <div>
+                          <input className="button is-primary is-fullwidth" type="submit" value="Agregar contribucion"/>
+                        </div>
+                        </form>
+                      </>
+                      :
+                      ''
+                  }
+
+
                     <div className='button-contribution'>
                       <NavLink to='/centers'>
                         <button className='button is-primary'>Centros</button>

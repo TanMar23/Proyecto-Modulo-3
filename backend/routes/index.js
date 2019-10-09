@@ -1,7 +1,10 @@
 const router = require('express').Router();
 const CentrosAcopio = require('../models/CentrosAcopio')
 const User = require('../models/User')
+const Contribution = require('../models/Contribution')
 
+
+//CENTERS
 router.get('/centers', async (req, res, next) => {
   try {
     const places = await CentrosAcopio.find()
@@ -13,7 +16,6 @@ router.get('/centers', async (req, res, next) => {
   }
 })
 
-
 router.get('/center/:id', async (req, res, next) => {
   try {
     const place = await CentrosAcopio.findById(req.params.id)
@@ -24,7 +26,6 @@ router.get('/center/:id', async (req, res, next) => {
     console.log(error); 
   }
 })
-
 
 router.get('/centers/:categoryCenter', async (req, res, next) => {
   try {
@@ -38,12 +39,53 @@ router.get('/centers/:categoryCenter', async (req, res, next) => {
   }
 })
 
-
 router.post('/create-new', (req, res, next) => {
   CentrosAcopio.create(req.body)
   .then(newCenter => res.status(201).json({ newCenter }))
   .catch(err => res.status(500).json({ err }))
 })
+
+
+
+//CONTRIBUTIONS
+
+router.post('/add-contribution', (req, res, next) => {
+  Contribution.create(req.body)
+  .then(newContribution => res.status(201).json({ newContribution }))
+  .catch(err => res.status(500).json({ err }))
+})
+
+
+router.get('/contribution-list', async (req, res, next) => {
+  try {
+    const contributions = await Contribution.find()
+    console.log(contributions);
+    res.status(200).json({ contributions })
+
+  } catch (error) {
+    console.log(error); 
+  }
+})
+
+// router.get('/contribution/:id', async (req, res, next) => {
+//   try {
+//     const contribution = await Contribution.findById(req.params.id)
+//     console.log(contribution);
+//     res.status(200).json({ contribution })
+
+//   } catch (error) {
+//     console.log(error); 
+//   }
+// })
+
+
+router.delete('/contribution/:id', (req, res, next) => {
+  const { id } = req.params
+  Contribution.findByIdAndDelete(id)
+    .then(contribution => res.status(200).json({ contribution }))
+    .catch(error => res.status(500).json({ error }))
+})
+
 
 
 router.get('/levelup/:id', async (req, res, next) => {

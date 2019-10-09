@@ -26,17 +26,17 @@ export default class Home extends Component {
                     { user.role === 'ADMIN'? 
                   <>
                     <NavLink exact to='/centers'>
-                      <button className='button is-large is-primary'> Centros </button>
+                      <button className='button is-medium is-primary'> Centros </button>
                     </NavLink>
                     
                     <NavLink exact to='/test'>
-                    <button className='button is-large is-primary'>Registrar contribucion</button>
+                    <button className='button is-medium is-primary'>Registrar contribucion</button>
                     </NavLink>
                   </>
                   :
                   <>
                     <NavLink exact to='/centers'>
-                      <button className='button is-large is-primary'> Centros </button>
+                      <button className='button is-medium is-primary'> Centros </button>
                     </NavLink>
                   </>
                   }
