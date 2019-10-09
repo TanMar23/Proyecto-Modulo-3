@@ -28,6 +28,7 @@ class Profile extends Component {
           <p>Apellido: {user.lastName} </p>
           <p>Email: {user.email}</p>
           <p>Nivel: {user.level}</p>
+          <p>HOla</p>
         </div>
       </Layout>
     );
