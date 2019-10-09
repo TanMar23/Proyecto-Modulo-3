@@ -20,29 +20,31 @@ export default class Home extends Component {
               </div>
               <div className="column is-8">
                 <br/>
-                <p className='has-text-centered'>Bienvenido a green finder!</p>
-                <div className='home-button'>
-                  { user.role === 'ADMIN'? 
-                 <>
-                  <NavLink exact to='/centers'>
-                    <button className='button is-large is-primary'> Centros </button>
-                  </NavLink>
-                  
-                  <NavLink exact to='/test'>
-                  <button className='button is-large is-primary'>Registrar contribucion</button>
-                  </NavLink>
-                 </>
-                 :
-                 <>
-                  <NavLink exact to='/centers'>
-                    <button className='button is-large is-primary'> Centros </button>
-                  </NavLink>
-                 </>
-                }
+                <div className='top-home'>
+                  <p className='has-text-centered'>Bienvenido a green finder!</p>
+                  <div className='home-button'>
+                    { user.role === 'ADMIN'? 
+                  <>
+                    <NavLink exact to='/centers'>
+                      <button className='button is-large is-primary'> Centros </button>
+                    </NavLink>
+                    
+                    <NavLink exact to='/test'>
+                    <button className='button is-large is-primary'>Registrar contribucion</button>
+                    </NavLink>
+                  </>
+                  :
+                  <>
+                    <NavLink exact to='/centers'>
+                      <button className='button is-large is-primary'> Centros </button>
+                    </NavLink>
+                  </>
+                  }
+                  </div>
                 </div>
                
 
-                <div class="tabs is-boxed">
+                <div class="tabs is-boxed is-centered">
                   <ul>
                     <li class="is-active"><a>Quienes somos?</a></li>
                     <li><a>Por que green finder?</a></li>

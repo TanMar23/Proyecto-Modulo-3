@@ -25,7 +25,7 @@ export default class Layout extends Component {
           <div>
             <nav className="navbar" role="navigation" aria-label="main navigation" aria-label="dropdown navigation">
               <div className="navbar-brand">
-                <Link className="navbar-item" to="/">Green Finder</Link>
+                <Link className="navbar-item" to="/"> <span className='logo'>Green Finder</span> </Link>
                 <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                   <span aria-hidden="true"></span>
                   <span aria-hidden="true"></span>
@@ -41,7 +41,11 @@ export default class Layout extends Component {
                         <div>
                           <div className="navbar-start">
                             <Link className="navbar-item" to="/home">Home</Link>
+                            {user.role==='USUARIO' ? 
                             <Link className="navbar-item" to="/profile">Perfil</Link>
+                            :
+                            ''
+                            }
                             <button onClick={this.logOut} className="button is-primary">Cerrar Sesión</button>
                           </div>
                         </div>  

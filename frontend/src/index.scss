@@ -12,6 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.logo{
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  color: whitesmoke
+}
+
 .login-wrapper{
   background-image: url("https://source.unsplash.com/x8ZStukS2PM/1600x900");
   background-repeat: no-repeat;
@@ -94,7 +100,8 @@ code {
 
 .qrreader-wrapper{
   background-color: #264f20;
-  background-image: url("https://source.unsplash.com/QSIq9ncQkzY/1600x900");
+  // background-color:linear-gradient(top, #384913, #739800);
+  background-image: url("https://source.unsplash.com/_gu7E90QChU/1600x900");
   background-size: cover;
   background-repeat: no-repeat;
   height: 103vh;
@@ -107,4 +114,22 @@ code {
 .qr-code-reader{
   display: flex;
   justify-content: center;
+}
+
+.profile-wrapper{
+  padding: 10% 0%
+}
+
+.profile-images{
+  display: flex;
+  justify-content: center;
+  padding: 5% 0
+}
+
+.profile-p{
+  text-align: center
+}
+
+.top-home{
+  padding-bottom: 8%; 
 }
