@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'http://localhost:3000/api'
+const baseURL = 'https://young-beyond-07801.herokuapp.com/api'
 
 const service = axios.create({ baseURL });
 

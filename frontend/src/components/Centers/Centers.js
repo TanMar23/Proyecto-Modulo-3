@@ -11,14 +11,14 @@ export default class Centers extends Component {
     }
 
     getCenters = async () => {
-        const response = await axios.get('http://localhost:3000/api/centers')        
+        const response = await axios.get('https://young-beyond-07801.herokuapp.com/api/centers')        
         this.setState({
             centers: response.data.places
         })
     }
 
     getFilteredCenters = async () => {
-        const response = await axios.get(`http://localhost:3000/api/centers/${this.state.center}`)   
+        const response = await axios.get(`https://young-beyond-07801.herokuapp.com/api/centers/${this.state.center}`)   
         this.setState({
             centers: response.data.centersInCategory 
         })        

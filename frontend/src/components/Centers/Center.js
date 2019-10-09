@@ -19,7 +19,7 @@ class Center extends Component {
 
 
   componentDidMount() {
-    axios.get(`http://localhost:3000/api/center/${this.props.match.params.id}`).then( res =>{
+    axios.get(`https://young-beyond-07801.herokuapp.com/api/center/${this.props.match.params.id}`).then( res =>{
     this.setState({center: res.data.place})
     const map = new mapboxgl.Map({
         container: this.mapContainer,

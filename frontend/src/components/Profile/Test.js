@@ -38,7 +38,7 @@ export default class Test extends Component {
             result: data
           })
           const details = data.replace(" ","-")
-          axios.get('http://localhost:3000/api/levelup/'+details)
+          axios.get('https://young-beyond-07801.herokuapp.com/api/levelup/'+details)
         }
       }
       handleError = err => {

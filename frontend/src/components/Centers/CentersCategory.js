@@ -5,7 +5,7 @@ import axios from 'axios'
 export default class CentersCategory extends Component {
 
     getFilteredCenters = async () => {
-        const response = await axios.get('http://localhost:3000/api/centers/:categoryCenter')        
+        const response = await axios.get('https://young-beyond-07801.herokuapp.com/api/centers/:categoryCenter')        
         this.setState({
             centers: response.data.places
         })        

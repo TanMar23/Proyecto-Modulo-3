@@ -23,7 +23,7 @@ export default class Contribution extends Component {
 
     uploadPin(pin){
         const details={id:this.context.state.loggedUser._id, pin:pin}
-        axios.post(`http://localhost:3000/api/levelup`,details)
+        axios.post(`https://young-beyond-07801.herokuapp.com/api/levelup`,details)
     }
 
     render() {

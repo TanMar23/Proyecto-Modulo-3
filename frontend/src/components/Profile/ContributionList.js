@@ -8,7 +8,7 @@ export default class ContributionList extends Component {
     }
 
     getContributions = async () => {
-        const response = await axios.get('http://localhost:3000/api/contribution-list')        
+        const response = await axios.get('https://young-beyond-07801.herokuapp.com/api/contribution-list')        
         this.setState({
             contributions: response.data.contributions
         })
@@ -19,7 +19,7 @@ export default class ContributionList extends Component {
     }
 
     deleteContribution = (id) => {
-        axios.delete(`http://localhost:3000/api/contribution/${id}`)
+        axios.delete(`https://young-beyond-07801.herokuapp.com/api/contribution/${id}`)
         .then(response => {
             this.setState(prevState => {
                 return {
