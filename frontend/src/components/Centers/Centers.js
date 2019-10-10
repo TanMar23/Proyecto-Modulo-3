@@ -105,7 +105,11 @@ export default class Centers extends Component {
                                 </tr>
  
                      
-                        ) : <p>Cargando...</p>}
+                        ) : <tr>
+                            <td>
+                            <h3>Cargando...</h3>
+                            </td>
+                            </tr>}
                             </tbody>
                            </table>
 
