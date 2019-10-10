@@ -5,7 +5,6 @@ const userSchema = new Schema(
   {
     email: {
       type: String,
-      unique: true,
       // required: true
     },
     name: String,
@@ -19,7 +18,10 @@ const userSchema = new Schema(
       type: String,
       default: "http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" 
     },
-    level: Number,
+    level: {
+      type: Number,
+      default: 1
+    },
     pin: {
       type: Number,
       default: 0

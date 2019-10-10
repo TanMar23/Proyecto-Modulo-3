@@ -25,7 +25,7 @@ export default class Layout extends Component {
           <div>
             <nav className="navbar" role="navigation" aria-label="main navigation" aria-label="dropdown navigation">
               <div className="navbar-brand">
-                <Link className="navbar-item" to="/"> <span className='logo'>Green Finder</span> </Link>
+                <Link className="navbar-item" to="/"> <img className="logo"src="/images/greenFinder.svg" alt="green-finder logo"/> </Link>
                 <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                   <span aria-hidden="true"></span>
                   <span aria-hidden="true"></span>

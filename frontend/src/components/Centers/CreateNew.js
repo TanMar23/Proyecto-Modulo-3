@@ -50,7 +50,7 @@ export default class CreateNew extends Component {
           <Layout history={this.props.history}>
             <div className="new-center-wrapper">
               <div className="columns is-centered">
-                <div >
+                <div className="add-new-box">
                   <form className="columns is-5 box" onSubmit={this.addCenter}>
                     <div className="column">
                       <h1 className="title is-3">Agregar centro de acopio</h1>

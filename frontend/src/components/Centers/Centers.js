@@ -45,7 +45,7 @@ export default class Centers extends Component {
                 <div className="columns is-centered">
                     <div className="column is-6">
                         <br/>
-                        <p className="has-text-centered">CENTROS DE ACOPIO</p> 
+                        <h1 className="has-text-centered">CENTROS DE ACOPIO</h1> 
                     </div>
                 </div>
 
@@ -71,10 +71,10 @@ export default class Centers extends Component {
                                     </select>
                                     </div>
                                 </div>
-                                <div className="control">
+                                <div className="control centers-button">
                                     <button type="submit" className="button is-primary" onClick={this.getFilteredCenters}>Filtrar</button>
                                 </div>
-                                <div className="control">
+                                <div className="control centers-button">
                                     <button type="submit" className="button is-primary" onClick={this.getCenters}>Ver todos</button>
                                 </div>
                             </div>
@@ -85,12 +85,14 @@ export default class Centers extends Component {
                
                 <div className="columns is-centered">
                     <div className="column is-7">
-                        <p className="has-text-centered">¿Conoces algún centro que no este aquí?</p>
+                    <div className="box">
+                        <h3 className="has-text-centered">¿Conoces algún centro que no este aquí?</h3>
                         <div className='add-center-button'>
                             <NavLink exact to='/create-new'>
                             <button className='button is-primary'>Agregar nuevo centro</button>
                             </NavLink>
                         </div>
+                    </div>
                     
                         {centers ? centers.map((center, i) => 
                         <table className= "box table" key={i}>
@@ -106,6 +108,7 @@ export default class Centers extends Component {
                         ) : <p>Cargando...</p>}
                     </div>
                 </div>
+                <br/>
             </div>
             </Layout>
 

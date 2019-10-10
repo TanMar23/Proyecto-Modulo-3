@@ -15,13 +15,13 @@ export default class Home extends Component {
             <div className="columns">
               <div className="column is-4">
                 <div className="home-container container">
-                <img src="https://source.unsplash.com/uqxe2L1Aq0g/400x700" width='400px' height='800px' alt="green city"/>
+                <img src="https://source.unsplash.com/uqxe2L1Aq0g/400x700" width='400px' height='1000px' alt="green city"/>
                 </div>
               </div>
               <div className="column is-8">
                 <br/>
                 <div className='top-home'>
-                  <p className='has-text-centered'>Bienvenido a green finder!</p>
+                  <h1 className='has-text-centered'>Bienvenido a green finder!</h1>
                   <div className='home-button'>
                     { user.role === 'ADMIN'? 
                   <>
@@ -43,10 +43,10 @@ export default class Home extends Component {
                   </div>
                 </div>
                
-
-                <div class="tabs is-boxed is-centered">
+                {/* Empieza tabs */}
+                <div className="tabs is-boxed is-centered">
                   <ul>
-                    <li class="is-active"><a>Quienes somos?</a></li>
+                    <li className="is-active"><a>Quienes somos?</a></li>
                     <li><a>Por que green finder?</a></li>
                     <li><a>Como funciona?</a></li>
                   </ul>

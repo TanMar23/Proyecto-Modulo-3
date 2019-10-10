@@ -2,10 +2,9 @@ import axios from 'axios';
 
 // para crear las peticiones de axios
 
-// process.env.NODE_ENV === 'production'
-  // ? (const baseURL = 'here should be your production endpoint')
-  // : ();
-const baseURL = 'https://young-beyond-07801.herokuapp.com/api'
+const isProduction = process.env.NODE_ENV === 'production'
+
+const baseURL = isProduction ? 'https://young-beyond-07801.herokuapp.com' : 'http://localhost:3000/api'
 
 const service = axios.create({ withCredentials: true, baseURL });
 

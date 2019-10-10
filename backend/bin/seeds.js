@@ -485,7 +485,7 @@ const data = [
 ]
 
 
-mongoose.connect('mongodb://localhost/proyecto-modulo-3', {useNewUrlParser: true})
+mongoose.connect('mongodb+srv://Tania:123@cluster0-podtu.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true})
     .then(async()=> {
       const centros = await CentrosAcopio.create(data)
       console.log(`${centros.length} centros created`)

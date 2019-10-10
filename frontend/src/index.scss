@@ -12,12 +12,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.logo{
-  font-family: 'Pacifico', cursive;
-  font-size: 30px;
-  color: whitesmoke
+.navbar-item img.logo{
+max-height: 200px;
+width: 120px;
 }
-
 .login-wrapper{
   background-image: url("https://source.unsplash.com/x8ZStukS2PM/1600x900");
   background-repeat: no-repeat;
@@ -67,9 +65,17 @@ code {
   padding: 15px;
 }
 
+.centers-button{
+  padding-right: 10px
+}
+
 .ver-button{
   display: flex;
   justify-content: flex-end
+}
+
+.add-new-box{
+  padding: 50px 0
 }
 
 .category-center{

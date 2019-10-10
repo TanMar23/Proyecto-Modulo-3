@@ -110,6 +110,16 @@ router.get('/levelup/:id', async (req, res, next) => {
   }
 })
 
+router.patch('/levelup/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params
+    const userUpdated = await User.findByIdAndUpdate(id, { $inc: { level: 1 } }, { new: true })
+    res.status(202).json({ userUpdated })
+  } catch(e) {
+    res.status(500).json({ e })
+  }
+})
+
 router.post('/levelup', async (req, res, next) => {
   try{
     const { id,pin } = req.body
