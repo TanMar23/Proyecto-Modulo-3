@@ -32,6 +32,17 @@ width: 120px;
   justify-content: center
 }
 
+.signup-button{
+  padding-top: 25px
+}
+
+.login-button{
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 15px 
+}
+
 .card-text{
   text-align: center;
 }
@@ -71,7 +82,7 @@ width: 120px;
 
 .ver-button{
   display: flex;
-  justify-content: flex-end
+  justify-content: center
 }
 
 .add-new-box{

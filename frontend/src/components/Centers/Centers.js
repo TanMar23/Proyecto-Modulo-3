@@ -45,7 +45,7 @@ export default class Centers extends Component {
                 <div className="columns is-centered">
                     <div className="column is-6">
                         <br/>
-                        <h1 className="has-text-centered">CENTROS DE ACOPIO</h1> 
+                        <h1 className="has-text-centered is-size-4">CENTROS DE ACOPIO</h1> 
                     </div>
                 </div>
 
@@ -93,19 +93,22 @@ export default class Centers extends Component {
                             </NavLink>
                         </div>
                     </div>
-                    
+                    <table className= "box table" >
+
+                    <tbody>
                         {centers ? centers.map((center, i) => 
-                        <table className= "box table" key={i}>
-                            <tbody>
-                                <tr>
-                                <td>{center.empresa}</td>
-                                <div className="ver-button">
+                                <tr key={i}>
+
+                                <td>{center.empresa}</td> 
+                                <td></td>
                                 <td><Link to={`/center/${center._id}`}>Ver</Link></td>
-                                </div>
                                 </tr>
-                            </tbody>
-                        </table>
+ 
+                     
                         ) : <p>Cargando...</p>}
+                            </tbody>
+                           </table>
+
                     </div>
                 </div>
                 <br/>

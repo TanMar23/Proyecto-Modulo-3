@@ -21,7 +21,7 @@ export default class Home extends Component {
               <div className="column is-8">
                 <br/>
                 <div className='top-home'>
-                  <h1 className='has-text-centered'>Bienvenido a green finder!</h1>
+                  <h1 className='has-text-centered is-size-4'>Bienvenido a green finder!</h1>
                   <div className='home-button'>
                     { user.role === 'ADMIN'? 
                   <>
@@ -46,9 +46,9 @@ export default class Home extends Component {
                 {/* Empieza tabs */}
                 <div className="tabs is-boxed is-centered">
                   <ul>
-                    <li className="is-active"><a>Quienes somos?</a></li>
-                    <li><a>Por que green finder?</a></li>
-                    <li><a>Como funciona?</a></li>
+                    <li className="is-active"><a href='#'>Quienes somos?</a></li>
+                    <li ><a href='#'>Por que green finder?</a></li>
+                    <li><a href='#'>Como funciona?</a></li>
                   </ul>
                 </div>
             

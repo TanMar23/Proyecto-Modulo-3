@@ -44,15 +44,17 @@ class Login extends Component {
             
              <div className="columns is-centered">
                  <div className="column is-5">
-                 <h1 className="title is-1 has-text-light">Iniciar sesión</h1>
+                 <h1 className="title is-1 has-text-light has-text-centered">Iniciar sesión</h1>
                         <form onSubmit={this.onSubmit}>
-                            <label className="label has-text-light is-size-4">Email</label>
+                            <label className="label has-text-light is-size-4 has-text-centered">Email</label>
                             <input className="input" type="email" name="email" placeholder="Email" onChange={this.handleInput}/>
-                            <label className="label has-text-light is-size-4">Contraseña</label>
+                            <label className="label has-text-light is-size-4 has-text-centered">Contraseña</label>
                             <input className="input" type="password" name="password" placeholder="Password" onChange={this.handleInput}/>
-                            <input className="button is-primary" type="submit" value="Login" />
+                            <div className='login-button'>
+                                <input className="button is-primary" type="submit" value="Iniciar sesión" />
+                            </div>
                         </form>
-                    <p className="has-text-light is-size-5">Si aún no tienes una cuenta, puedes crearla <Link to={"/signup"}>aquí   </Link></p>   
+                    <h3 className="has-text-light is-size-5">Si aún no tienes una cuenta, puedes crearla <Link to={"/signup"}>aquí   </Link></h3>   
                  </div>
              </div>
             </div>

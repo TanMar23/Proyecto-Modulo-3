@@ -44,7 +44,7 @@ class Signup extends Component {
               <p className="message is-success">{userMsg}</p>
               <form className="columns is-5" onSubmit={this.onSubmit}>
                 <div className="column">
-                  <h1 className="title is-1 has-text-light">Sign up</h1>
+                  <h1 className="title is-1 has-text-light has-text-centered">Sign up</h1>
                     <label className="label has-text-light is-size-4">Email:</label>
                     <input className="input" onChange={this.handleInput} type="email" name="email"/>
               
@@ -58,7 +58,7 @@ class Signup extends Component {
                     <label className="label has-text-light is-size-4">Contraseña:</label>
                     <input className="input" onChange={this.handleInput} type="password" name="password"/>
                 
-                  <div>
+                  <div className="signup-button">
                   <input className="button is-primary is-fullwidth" type="submit" value="Signup"/>
                 </div>
               </div>
