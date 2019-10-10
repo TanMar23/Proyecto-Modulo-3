@@ -43,16 +43,36 @@ export default class Home extends Component {
                   </div>
                 </div>
                
-                {/* Empieza tabs */}
-                <div className="tabs is-boxed is-centered">
-                  <ul>
-                    <li className="is-active"><a href='#'>Quienes somos?</a></li>
-                    <li ><a href='#'>Por que green finder?</a></li>
-                    <li><a href='#'>Como funciona?</a></li>
-                  </ul>
+                {/* Empieza boxes */}
+                <div className="question-wrapper">
+                  <div className="columns is-centered">
+                    <div className="column box is-8">
+                      <h3 className='has-text-centered'>¿Quiénes somos?</h3>
+                      <p>Somos una empresa 100% mexicana dedicada a fomentar una mejor cultura del manejo de desechos</p>
+                    </div>
+                  </div>
                 </div>
-            
-                
+                  <br/>
+                <div className="question-wrapper">
+                  <div className="columns is-centered">
+                    <div className="column box is-8">
+                      <h3 className='has-text-centered'>¿Por qué green finder?</h3>
+                      <div className='img-greenfinder'>
+                      <img src="/images/tiempos_desechos.jpg" width='300px' height='200px' alt="tiempos desechos"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+                <div className="question-wrapper">
+                  <div className="columns is-centered">
+                    <div className="column box is-8">
+                      <h3 className='has-text-centered'>¿Cómo funciona?</h3>
+                      <p>Te muestra los centros de acopio de residuos en la CDMX y sus alrededores. Por cada aportacion que hagas subes de nivel</p>
+                    </div>
+                  </div>
+                </div>
+                  <br/>
               </div>
             </div>
         </div>
@@ -60,3 +80,4 @@ export default class Home extends Component {
     );
   }
 }
+

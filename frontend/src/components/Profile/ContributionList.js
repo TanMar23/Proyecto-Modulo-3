@@ -37,24 +37,35 @@ export default class ContributionList extends Component {
         return (
             <Layout history={this.props.history}>
             <div>
+                <br/>
                 <h3 className='has-text-centered'>Contribuciones</h3>
-            {contributions ? contributions.map((contribution, i) => 
-                <table className= "box table" key={contribution._id}>
-                    <tbody>
-                        <tr>
-                        <td>{contribution.quantity}</td>
-                        <td>{contribution.unity}</td>
-                        <td>
-                            <button
-                                onClick = {() => this.deleteContribution(contribution._id)}>
-                                Borrar
-                            </button>
-                        </td>
-                        </tr>
-                        </tbody>
-                        </table>
-                ) : <p>Cargando...</p>
-            }
+                <br/>
+                <div className="contribution-wrapper">
+                    <div className="columns is-centered">
+                        <div className="column is-5">
+                            <div>
+                                {contributions ? contributions.map((contribution, i) => 
+                                <table className= "box table" key={contribution._id}>
+                                    <tbody>
+                                        <tr>
+                                        <td>Cantidad: {contribution.quantity}</td>
+                                        <td>Unidad: {contribution.unity}</td>
+                                        <td>
+                                            <button className="button is-primary"
+                                                onClick = {() => this.deleteContribution(contribution._id)}>
+                                                Borrar
+                                            </button>
+                                        </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                ) : <p>Cargando...</p>
+                                }
+                            </div>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
             </div>
             </Layout>
         )

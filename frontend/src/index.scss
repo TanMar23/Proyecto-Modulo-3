@@ -53,6 +53,10 @@ width: 120px;
   justify-content: space-around
 }
 
+.question-wrapper{
+  padding-bottom: 20px;
+}
+
 .landing-container{
   background-image: url("https://source.unsplash.com/FZU-vIW-lk8/1600x900");
   background-repeat: no-repeat;
@@ -149,4 +153,9 @@ width: 120px;
 
 .top-home{
   padding-bottom: 8%; 
+}
+
+.img-greenfinder{
+  display: flex;
+  justify-content: center;
 }

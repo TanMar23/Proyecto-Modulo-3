@@ -5,6 +5,15 @@ const Contribution = require('../models/Contribution')
 
 
 //CENTERS
+
+//Create
+router.post('/create-new', (req, res, next) => {
+  CentrosAcopio.create(req.body)
+  .then(newCenter => res.status(201).json({ newCenter }))
+  .catch(err => res.status(500).json({ err }))
+})
+
+//Read
 router.get('/centers', async (req, res, next) => {
   try {
     const places = await CentrosAcopio.find()
@@ -39,23 +48,40 @@ router.get('/centers/:categoryCenter', async (req, res, next) => {
   }
 })
 
-router.post('/create-new', (req, res, next) => {
-  CentrosAcopio.create(req.body)
-  .then(newCenter => res.status(201).json({ newCenter }))
-  .catch(err => res.status(500).json({ err }))
+
+//Update
+router.patch('/center/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params
+    const centerUpdated = await CentrosAcopio.findByIdAndUpdate(id, {...req.body} , { new: true })
+    res.status(202).json({ centerUpdated })
+  } catch(e) {
+    res.status(500).json({ e })
+  }
 })
+
+//Delete
+router.delete('/center/:id', (req, res, next) => {
+  const { id } = req.params
+  CentrosAcopio.findByIdAndDelete(id)
+    .then(center => res.status(200).json({ center }))
+    .catch(error => res.status(500).json({ error }))
+})
+
+
 
 
 
 //CONTRIBUTIONS
 
+//Create
 router.post('/add-contribution', (req, res, next) => {
   Contribution.create(req.body)
   .then(newContribution => res.status(201).json({ newContribution }))
   .catch(err => res.status(500).json({ err }))
 })
 
-
+//Read
 router.get('/contribution-list', async (req, res, next) => {
   try {
     const contributions = await Contribution.find()
@@ -67,18 +93,9 @@ router.get('/contribution-list', async (req, res, next) => {
   }
 })
 
-// router.get('/contribution/:id', async (req, res, next) => {
-//   try {
-//     const contribution = await Contribution.findById(req.params.id)
-//     console.log(contribution);
-//     res.status(200).json({ contribution })
-
-//   } catch (error) {
-//     console.log(error); 
-//   }
-// })
 
 
+//Delete
 router.delete('/contribution/:id', (req, res, next) => {
   const { id } = req.params
   Contribution.findByIdAndDelete(id)
@@ -110,6 +127,7 @@ router.get('/levelup/:id', async (req, res, next) => {
   }
 })
 
+//Update
 router.patch('/levelup/:id', async (req, res, next) => {
   try {
     const { id } = req.params
