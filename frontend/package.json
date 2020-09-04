@@ -9,7 +9,7 @@
     "bulma": "^0.7.5",
     "bulmaswatch": "^0.7.5",
     "mapbox-gl": "^1.4.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "qrcode.react": "^0.9.3",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
